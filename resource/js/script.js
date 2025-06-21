@@ -21,5 +21,4 @@ function showSlide(index) {
 prevSlide.addEventListener('click', () => showSlide(currentIndex - 1));
 nextSlide.addEventListener('click', () => showSlide(currentIndex + 1));
 
-// Auto-slide every 5 seconds
 setInterval(() => showSlide(currentIndex + 1), 5000);

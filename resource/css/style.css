@@ -12,16 +12,20 @@ body {
 }
 
 .nav-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1e3a8a;
-    padding: 1rem 2rem;
+    background-color: rgba(30, 58, 138, 0.95);
     color: #fff;
-    position: sticky;
+    padding: 1rem 2rem;
+    position: fixed;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 .logo {
     font-size: 1.8rem;
@@ -67,6 +71,7 @@ body {
 .hero-content h2 {
     font-size: 3rem;
     font-weight: 700;
+    color: #fcd34d;
     margin-bottom: 1rem;
 }
 
@@ -113,9 +118,9 @@ body {
 }
 
 
-
 .content-wrapper,
-#culture{
+#culture,
+#homestay{
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -151,6 +156,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     text-align: center;
+    margin-bottom: 0;
 }
 
 .slide img {
@@ -211,6 +217,80 @@ body {
 }
 
 
+
+#homestay {
+  padding: 4rem 2rem;
+  background-color: #f8fafc;
+}
+
+#homestay h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  color: #1e3a8a;
+  margin-bottom: 2rem;
+}
+
+.homestay-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.homestay-card {
+  flex: 1 1 calc(25% - 2rem);
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  max-width: 250px;
+}
+
+.homestay-card:hover {
+  transform: translateY(-5px);
+}
+
+.homestay-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.homestay-card h3 {
+  font-size: 1.2rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.homestay-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+
+@media (max-width: 1024px) {
+  .homestay-card {
+    flex: 1 1 calc(33.33% - 2rem); /* 3 per baris */
+  }
+}
+
+@media (max-width: 768px) {
+  .homestay-card {
+    flex: 1 1 calc(50% - 2rem); /* 2 per baris */
+  }
+}
+
+@media (max-width: 480px) {
+  .homestay-card {
+    flex: 1 1 100%; /* 1 per baris */
+  }
+}
+
+
 aside {
     flex: 1;
     background-color: #fff;
@@ -242,46 +322,84 @@ article {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+#culture article{
+    min-width: 1200px;
+}
+
 article h3 {
     color: #1e3a8a;
     margin-bottom: 0.5rem;
 }
 
 footer {
-    background-color: #1e3a8a;
-    color: #fff;
-    padding: 2rem;
-    margin-top: 2rem;
+  background: #1e3a8a;
+  color: #fff;
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .footer-section {
-    flex: 1;
-    margin: 1rem;
+  flex: 1 1 250px;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #fcd34d;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e0e7ff;
+  text-decoration: none;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
 }
 
 .social-links a {
-    color: #fff;
-    margin: 0 0.5rem;
-    font-size: 1.5rem;
-    transition: color 0.3s;
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+  color: #fcd34d;
 }
 
-.social-links a:hover {
-    color: #60a5fa;
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #3b82f6;
+  padding-top: 1rem;
+}
+
+.footer-bottom .quote {
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #cbd5e1;
 }
 
 .footer-copy {
-    text-align: center;
-    margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #a5b4fc;
 }
+
 
 @media (max-width: 768px) {
     .nav-links {
