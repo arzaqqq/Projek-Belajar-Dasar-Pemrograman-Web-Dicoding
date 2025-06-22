@@ -428,15 +428,15 @@ footer {
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: rgba(30, 58, 138, 0.1); /* Transparent when not scrolled */
-        backdrop-filter: blur(10px); /* Match navbar blur */
+        background-color: rgba(30, 58, 138, 0.1); 
+        backdrop-filter: blur(10px); 
         padding: 1rem;
         z-index: 999;
         transition: background-color 0.3s ease;
     }
 
     .nav-container.scrolled .nav-links {
-        background-color: rgba(30, 58, 138, 0.95); /* Solid when scrolled */
+        background-color: rgba(30, 58, 138, 0.95); 
     }
 
     .nav-links.active {
