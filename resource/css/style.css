@@ -17,31 +17,31 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(30, 58, 138, 0.1); /* Initially transparent */
+    background-color: rgba(30, 58, 138, 0.1); 
     color: #fff;
-    padding: 0.8rem 2rem; /* Smaller padding */
+    padding: 0.8rem 2rem; 
     position: fixed;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px); /* Enhanced blur for elegance */
-    box-shadow: none; /* No shadow initially */
-    transition: all 0.3s ease; /* Smooth transition */
+    backdrop-filter: blur(10px);
+    box-shadow: none; 
+    transition: all 0.3s ease; 
 }
 
 .nav-container.scrolled {
-    background-color: rgba(30, 58, 138, 0.95); /* Original style when scrolled */
-    padding: 1rem 2rem; /* Original padding */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Original shadow */
+    background-color: rgba(30, 58, 138, 0.95); 
+    padding: 1rem 2rem; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 .logo {
-    font-size: small; /* Smaller logo initially */
+    font-size: small; 
     transition: font-size 1.4rem;
     font-weight: 600;
 }
 
 .nav-container.scrolled .logo {
-    font-size: 1.8rem; /* Original logo size when scrolled */
+    font-size: 1.8rem; 
 }
 
 .logo {
@@ -145,6 +145,8 @@ body {
     padding: 2rem;
     gap: 2rem;
 }
+
+
 
 #destinations, #culture {
     flex: 2;
@@ -340,7 +342,7 @@ article {
 }
 
 #culture article{
-    min-width: 1200px;
+    width: 1200px;
 }
 
 article h3 {
@@ -419,19 +421,40 @@ footer {
 
 
 @media (max-width: 768px) {
-    .nav-links {
+   .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
-        background-color: #1e3a8a;
+        background-color: rgba(30, 58, 138, 0.1); /* Transparent when not scrolled */
+        backdrop-filter: blur(10px); /* Match navbar blur */
         padding: 1rem;
+        z-index: 999;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-container.scrolled .nav-links {
+        background-color: rgba(30, 58, 138, 0.95); /* Solid when scrolled */
     }
 
     .nav-links.active {
         display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-container {
+        background-color: rgba(30, 58, 138, 0.1); /* Ensure transparent in mobile */
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-container.scrolled {
+        background-color: rgba(30, 58, 138, 0.95); /* Opaque when scrolled */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     .menu-toggle {
