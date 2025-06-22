@@ -11,21 +11,38 @@ body {
     line-height: 1.6;
 }
 
+
 .nav-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(30, 58, 138, 0.95);
+    background-color: rgba(30, 58, 138, 0.1); /* Initially transparent */
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem; /* Smaller padding */
     position: fixed;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Enhanced blur for elegance */
+    box-shadow: none; /* No shadow initially */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
+.nav-container.scrolled {
+    background-color: rgba(30, 58, 138, 0.95); /* Original style when scrolled */
+    padding: 1rem 2rem; /* Original padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Original shadow */
+}
+
+.logo {
+    font-size: small; /* Smaller logo initially */
+    transition: font-size 1.4rem;
+    font-weight: 600;
+}
+
+.nav-container.scrolled .logo {
+    font-size: 1.8rem; /* Original logo size when scrolled */
+}
 
 .logo {
     font-size: 1.8rem;
