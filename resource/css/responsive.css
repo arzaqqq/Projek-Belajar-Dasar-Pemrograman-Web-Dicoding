@@ -1,0 +1,95 @@
+@media (max-width: 1024px) {
+  .homestay-card {
+    flex: 1 1 calc(33.33% - 2rem); /* 3 per baris */
+  }
+}
+
+@media (max-width: 768px) {
+   .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(30, 58, 138, 0.1); 
+        backdrop-filter: blur(10px); 
+        padding: 1rem;
+        z-index: 999;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-container.scrolled .nav-links {
+        background-color: rgba(30, 58, 138, 0.95); 
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-container {
+        background-color: rgba(30, 58, 138, 0.1); 
+        backdrop-filter: blur(10px);
+    }
+
+    .nav-container.scrolled {
+        background-color: rgba(30, 58, 138, 0.95); 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .homestay-card {
+    flex: 1 1 calc(50% - 2rem); 
+  }
+}
+
+
+@media(max-width:520px){
+    .content-wrapper #destinations{
+    max-width:100%;
+    margin: 0 auto;
+   }
+}
+
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .slide img {
+        height: 150px;
+    }
+
+    #destinations h2, #culture h2 {
+        font-size: 1.5rem;
+    }
+
+    .homestay-card {
+    flex: 1 1 100%; 
+  }
+}
