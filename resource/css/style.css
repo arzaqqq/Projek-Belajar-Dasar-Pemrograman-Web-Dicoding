@@ -11,8 +11,6 @@ body {
     line-height: 1.6;
 }
 
-
-
 .nav-container {
     width: 100%;
     display: flex;
@@ -86,7 +84,7 @@ body {
     color: #fff;
 }
 
-.hero-content h1 {
+.hero-content h {
     font-size: 3rem;
     font-weight: 700;
     color: #fcd34d;
