@@ -206,7 +206,7 @@ body {
 }
 
 
-.slide end-slider .btn {
+.slide .end-slider .btn {
    margin-top: 20px;
     background-color: #1e3a8a;
     color: #fff;
@@ -217,7 +217,7 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.slide end-slider .btn:hover {
+.slide .end-slider .btn:hover {
     background-color: #2c5282;
 }
 
